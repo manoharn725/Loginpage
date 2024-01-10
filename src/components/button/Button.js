@@ -1,9 +1,9 @@
 import './Button.css';
 
-function Button({btnName, classNames}){
+function Button({btnName, propClassName, propOnClick}){
     return(
         <div>
-            <button className={classNames}>{btnName}</button>
+            <button className={propClassName} onClick={propOnClick}>{btnName}</button>
         </div>
     )
 }
