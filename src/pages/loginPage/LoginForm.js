@@ -1,6 +1,7 @@
 import { useState } from "react";
-import Button from "../../components/button/Button";
 import "./LoginForm.css";
+import Button from "../../components/button/Button";
+import Input from "../../components/input/Input";
 import { FaUser, FaLock } from "react-icons/fa";
 import { MdEmail } from "react-icons/md";
 
@@ -11,26 +12,47 @@ function LoginForm() {
     setAction("Sign Up");
   };
   const handleLogin = () => {
-    setAction('Login')
-  }
+    setAction("Login");
+  };
 
   return (
     <div className="wrapper">
       <form action="">
         <h1>{action} Form</h1>
-        <div className={action === "Login" ? "hide" :"input-box"}>
-          <input type="text" placeholder={action === "Login" ? "Enter userame" : "create username"} required />
+        <div className={action === "Login" ? "hide" : "input-box"}>
+          <Input
+            propType="text"
+            propPlaceholder={
+              action === "Login" ? "Enter userame" : "create username"
+            }
+            propRequired
+          />
+
           <FaUser className="icon" />
         </div>
         <div className="input-box">
-          <input type="email" placeholder={action === "Login" ? "Enter usermail id" : "create usermail"} required />
-          <MdEmail  className="icon" />
+          <Input
+            propType="email"
+            propPlaceholder={
+              action === "Login" ? "Enter usermail id" : "create usermail"
+            }
+            propRequired
+          />
+
+          <MdEmail className="icon" />
         </div>
         <div className="input-box">
-          <input type="password" placeholder={action === "Login" ? "Enter userpassword" : "create password"} required />
+          <Input
+            propType="password"
+            propPlaceholder={
+              action === "Login" ? "Enter userpassword" : "create password"
+            }
+            propRequired
+          />
+
           <FaLock className="icon" />
         </div>
-        <div className={action === "Sign Up" ? "hide" :"remember-forgot"}>
+        <div className={action === "Sign Up" ? "hide" : "remember-forgot"}>
           <label>
             <input type="checkbox" />
             Remember Me
@@ -38,12 +60,18 @@ function LoginForm() {
           <a href="#">Forgot Password?</a>
         </div>
 
-        <Button propClassName="btn rounded btn-primary" btnName={action} propOnClick={handleLogin} />
+        <Button
+          propClassName="btn rounded btn-primary"
+          btnName={action}
+          propOnClick={handleLogin}
+        />
 
-        <div className={action === "Sign Up" ? "hide" :"register-link"}>
+        <div className={action === "Sign Up" ? "hide" : "register-link"}>
           <p>
             Don't Forgot to have an Account?{" "}
-            <a onClick={handleSignup}>Register</a>
+            <a href="#" onClick={handleSignup}>
+              Register
+            </a>
           </p>
         </div>
       </form>
