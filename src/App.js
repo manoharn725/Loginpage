@@ -1,8 +1,8 @@
-import LoginForm from "./pages/loginPage/LoginForm";
+import LoginForm from "./pages/login/LoginForm";
 
 function App() {
   return (
-    <div className="app">
+    <div>
       <LoginForm />
 
     </div>
