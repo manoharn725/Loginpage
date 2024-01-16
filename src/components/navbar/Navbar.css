@@ -11,7 +11,7 @@
     min-height: 6vh;
 }
 .nav-item{
- width: 150px;
+ min-width: 150px;
  height: auto;
  display: flex;
  align-items: center;
@@ -26,11 +26,15 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    padding: 8px;
+    border-radius: 3px; 
 }
 .nav-item > a:hover{
     text-decoration: underline;
-    background-color: #6f6f6f47;
+    background-color: #ffcc00;
     padding: 8px;
-    border-radius: 3px;
-   
+    border-radius: 3px; 
+}
+.active{
+    background-color: #efbf00;
 }
