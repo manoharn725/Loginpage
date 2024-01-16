@@ -11,20 +11,20 @@
   font-weight: 700;
   }
   
-  .btn:hover {
+.btn:hover {
     opacity: 0.8;
   }
-  .rounded{
+.rounded{
     border-radius: 40px;
     border: 2px solid rgb(255, 255, 255, .2);
   }
-  .btn-primary{
+ .btn-primary{
     background-color: #fbd49782;  
   }
-  .btn-secondary{
+.btn-secondary{
     background-color: lightcoral;
   }
-  .btn-danger {
+.btn-danger {
     width: auto;
     padding: 10px 18px;
     background-color: #f44336;
@@ -88,11 +88,10 @@
   accent-color: white;
   margin-right: 4px;
 }
-.remember-forgot a{
+.remember-forgot span{
   color: rgb(255, 255, 255);
-  text-decoration: none;
 }
-.remember-forgot a:hover{
+.remember-forgot span:hover{
   text-decoration: underline;
 }
 .wrapper .register-link{
@@ -102,14 +101,13 @@
   color: white;
 }
 
-.register-link p a{
+.register-link p span{
   color: rgb(255, 255, 255);
-  text-decoration: none;
   font-weight: 600;
   cursor: pointer;
 }
 
-.register-link p a:hover{
+.register-link p span:hover{
   text-decoration: underline;
 }
 .hide{
@@ -125,8 +123,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  min-height: 100vh;
- 
+  min-height: 94vh;
   background-size: cover;
   background-position: center; 
   filter: saturate(0.8);
@@ -135,5 +132,6 @@
   color:rgb(247, 247, 161);
 }
 .username{
- font-size: 20px; 
+ font-size: 18px; 
+ font-style: italic;
 }

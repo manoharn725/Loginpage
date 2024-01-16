@@ -46,7 +46,7 @@ function LoginForm() {
     <div className={loggedIn ? "welcome page" : "login page"}>
       {loggedIn ? (
         <div>
-          <h1 className="heading-color">Welcome <span className="username">{userName}</span></h1>
+          <h1 className="heading-color"><span className="username">Welcome</span> {userName}</h1>
           <Button
             propClassName="btn rounded btn-primary"
             btnName="Log Out"
@@ -105,7 +105,7 @@ function LoginForm() {
                 <input type="checkbox" />
                 Remember Me
               </label>
-              <a href="#">Forgot Password?</a>
+              <span>Forgot Password?</span>
             </div>
 
             <Button
@@ -119,9 +119,9 @@ function LoginForm() {
             >
               <p>
                 Don't Forgot to have an Account?{" "}
-                <a href="#" onClick={handleRegister}>
+                <span onClick={handleRegister}>
                   Register
-                </a>
+                </span>
               </p>
             </div>
           </form>
